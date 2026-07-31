@@ -51,7 +51,7 @@ class BalanceEnquiry extends JFrame implements ActionListener {
                 }
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Database Error: " + e.getMessage(), "Haziq's ATM Simulator", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Database Error: " + e.getMessage(), "ATM Simulator", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
         }
 

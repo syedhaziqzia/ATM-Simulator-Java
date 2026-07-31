@@ -24,7 +24,7 @@ public class Signup2 extends JFrame implements ActionListener{
         */
         
         this.formno = formno;
-        setTitle("Haziq's ATM Simulator - New Account (Page 2)");
+        setTitle("ATM Simulator - New Account (Page 2)");
         
         l1 = new JLabel("Page 2: Additonal Details");
         l1.setFont(new Font("Segoe UI", Font.BOLD, 22));
@@ -233,7 +233,7 @@ public class Signup2 extends JFrame implements ActionListener{
         
         try{
             if(t2.getText().equals("")){
-                JOptionPane.showMessageDialog(null, "Fill all the required fields", "Haziq's ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Fill all the required fields", "ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
             }else{
                 Conn c1 = new Conn();
                 String q1 = "INSERT INTO signuptwo (formno, religion, category, income, education, occupation, pan, aadhar, seniorcitizen, existingaccount) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -254,7 +254,7 @@ public class Signup2 extends JFrame implements ActionListener{
                 setVisible(false);
             }
         }catch(Exception ex){
-             JOptionPane.showMessageDialog(null, "Database Error: " + ex.getMessage(), "Haziq's ATM Simulator", JOptionPane.ERROR_MESSAGE);
+             JOptionPane.showMessageDialog(null, "Database Error: " + ex.getMessage(), "ATM Simulator", JOptionPane.ERROR_MESSAGE);
              ex.printStackTrace();
         }
     

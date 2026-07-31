@@ -10,7 +10,7 @@ public class MiniStatement extends JFrame implements ActionListener{
     JButton b1, b2;
     JLabel l1;
     MiniStatement(String pin){
-        super("Haziq's ATM Simulator - Mini Statement");
+        super("ATM Simulator - Mini Statement");
         getContentPane().setBackground(new Color(240, 248, 255));
         setSize(400,600);
         setLocation(20,20);
@@ -18,7 +18,7 @@ public class MiniStatement extends JFrame implements ActionListener{
         l1 = new JLabel();
         add(l1);
         
-        JLabel l2 = new JLabel("Haziq's ATM Simulator");
+        JLabel l2 = new JLabel("ATM Simulator");
         l2.setFont(new Font("Segoe UI", Font.BOLD, 16));
         l2.setForeground(new Color(10, 25, 49));
         l2.setBounds(110, 20, 200, 20);

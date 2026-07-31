@@ -94,17 +94,17 @@ public class Pin extends JFrame implements ActionListener{
             String rpin = new String(t2.getPassword());
             
             if(!npin.equals(rpin)){
-                JOptionPane.showMessageDialog(null, "Entered PIN does not match", "Haziq's ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Entered PIN does not match", "ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
                 return;
             }
             
             if(ae.getSource()==b1){
                 if (new String(t1.getPassword()).equals("")){
-                    JOptionPane.showMessageDialog(null, "Enter New PIN", "Haziq's ATM Simulator", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Enter New PIN", "ATM Simulator", JOptionPane.WARNING_MESSAGE);
                     return;
                 }
                 if (new String(t2.getPassword()).equals("")){
-                    JOptionPane.showMessageDialog(null, "Re-Enter new PIN", "Haziq's ATM Simulator", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Re-Enter new PIN", "ATM Simulator", JOptionPane.WARNING_MESSAGE);
                     return;
                 }
                 
@@ -127,7 +127,7 @@ public class Pin extends JFrame implements ActionListener{
                 pstmt3.setString(2, pin);
                 pstmt3.executeUpdate();
 
-                JOptionPane.showMessageDialog(null, "PIN changed successfully", "Haziq's ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "PIN changed successfully", "ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
                 setVisible(false);
                 new Transactions(rpin).setVisible(true);
             
@@ -136,7 +136,7 @@ public class Pin extends JFrame implements ActionListener{
                 setVisible(false);
             }
         }catch(Exception e){
-            JOptionPane.showMessageDialog(null, "Database Error: " + e.getMessage(), "Haziq's ATM Simulator", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Database Error: " + e.getMessage(), "ATM Simulator", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
         }
     }

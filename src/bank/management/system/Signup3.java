@@ -16,7 +16,7 @@ public class Signup3 extends JFrame implements ActionListener{
     String formno;
     Signup3(String formno){
         this.formno = formno;
-        setTitle("Haziq's ATM Simulator - New Account (Page 3)");
+        setTitle("ATM Simulator - New Account (Page 3)");
     
     /*    ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("ASimulatorSystem/icons/logo.jpg"));
         Image i2 = i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
@@ -257,7 +257,7 @@ public class Signup3 extends JFrame implements ActionListener{
             if(ae.getSource()==b1){
                 
                 if (atype == null || atype.equals("")) {
-                    JOptionPane.showMessageDialog(null, "Fill all the required fields", "Haziq's ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Fill all the required fields", "ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
                 }else{
                     Conn c1 = new Conn();
                     
@@ -279,7 +279,7 @@ public class Signup3 extends JFrame implements ActionListener{
                     
                     JOptionPane.showMessageDialog(null, 
                         "Account created!\nCard Number: " + cardno + "\nPIN: " + pin + "\n\nPlease keep these safe!",
-                        "Haziq's ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
+                        "ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
                     
                     new Deposit(pin).setVisible(true);
                     setVisible(false);
@@ -290,7 +290,7 @@ public class Signup3 extends JFrame implements ActionListener{
             }
             
         }catch(Exception ex){
-            JOptionPane.showMessageDialog(null, "Database Error: " + ex.getMessage(), "Haziq's ATM Simulator", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Database Error: " + ex.getMessage(), "ATM Simulator", JOptionPane.ERROR_MESSAGE);
             ex.printStackTrace();
         }
         

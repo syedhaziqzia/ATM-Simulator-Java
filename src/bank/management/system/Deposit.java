@@ -74,7 +74,7 @@ public class Deposit extends JFrame implements ActionListener {
             Date date = new Date();
             if (ae.getSource() == b1) {
                 if (t1.getText().equals("")) {
-                    JOptionPane.showMessageDialog(null, "Please enter the Amount you want to Deposit", "Haziq's ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Please enter the Amount you want to Deposit", "ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
                 } else {
                     Conn c1 = new Conn(); // Assuming `Conn` is your database connection class
                     String query = "INSERT INTO bank (pin, date, type, amount) VALUES (?, ?, ?, ?)";
@@ -85,7 +85,7 @@ public class Deposit extends JFrame implements ActionListener {
                     pstmt.setString(4, amount);
                     pstmt.executeUpdate();
                     
-                    JOptionPane.showMessageDialog(null, "Rs. " + amount + " Deposited Successfully", "Haziq's ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Rs. " + amount + " Deposited Successfully", "ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
                     setVisible(false);
                     new Transactions(pin).setVisible(true); // Assuming `Transactions` is another screen
                 }
@@ -94,7 +94,7 @@ public class Deposit extends JFrame implements ActionListener {
                 new Transactions(pin).setVisible(true);
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Database Error: " + e.getMessage(), "Haziq's ATM Simulator", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Database Error: " + e.getMessage(), "ATM Simulator", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
         }
     }

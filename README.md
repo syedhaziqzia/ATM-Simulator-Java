@@ -1,4 +1,4 @@
-# Haziq's ATM Simulator
+# ATM Simulator
 
 A feature-rich **ATM & Bank Account Management Simulator** built entirely in **Java Swing**. This desktop application simulates real-world ATM operations including account registration, deposits, withdrawals, mini statements, PIN changes, and more — all with a modern **Navy Blue & Gold** UI theme.
 
@@ -105,7 +105,7 @@ CREATE TABLE bank (pin VARCHAR(4), date VARCHAR(50), type VARCHAR(15), amount VA
 
 ## Author
 
-**Haziq Zia**  
+**ATM Simulator Project**  
 Built as a Java Swing desktop project — customized, refactored, and improved.
 
 ---

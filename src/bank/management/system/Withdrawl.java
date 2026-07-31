@@ -87,7 +87,7 @@ public class Withdrawl extends JFrame implements ActionListener {
 
             if (ae.getSource() == b1) { // Withdraw Button
                 if (amount.equals("")) {
-                    JOptionPane.showMessageDialog(null, "Please enter the amount you want to withdraw", "Haziq's ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Please enter the amount you want to withdraw", "ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
                 } else {
                     Conn c1 = new Conn();
                     
@@ -106,7 +106,7 @@ public class Withdrawl extends JFrame implements ActionListener {
                     }
 
                     if (balance < Integer.parseInt(amount)) {
-                        JOptionPane.showMessageDialog(null, "Insufficient Balance", "Haziq's ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, "Insufficient Balance", "ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
                         return;
                     }
 
@@ -118,7 +118,7 @@ public class Withdrawl extends JFrame implements ActionListener {
                     pstmt2.setString(4, amount);
                     pstmt2.executeUpdate();
                     
-                    JOptionPane.showMessageDialog(null, "Rs. " + amount + " Debited Successfully", "Haziq's ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Rs. " + amount + " Debited Successfully", "ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
 
                     setVisible(false);
                     new Transactions(pin).setVisible(true);
@@ -128,7 +128,7 @@ public class Withdrawl extends JFrame implements ActionListener {
                 new Transactions(pin).setVisible(true);
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Database Error: " + e.getMessage(), "Haziq's ATM Simulator", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Database Error: " + e.getMessage(), "ATM Simulator", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
         }
     }

@@ -123,7 +123,7 @@ public class FastCash extends JFrame implements ActionListener {
 
                 // Check if balance is sufficient
                 if (balance < Integer.parseInt(amount)) {
-                    JOptionPane.showMessageDialog(null, "Insufficient Balance", "Haziq's ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Insufficient Balance", "ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
                     return;
                 }
 
@@ -137,7 +137,7 @@ public class FastCash extends JFrame implements ActionListener {
                 pstmt2.setString(4, amount);
                 pstmt2.executeUpdate();
                 
-                JOptionPane.showMessageDialog(null, "Rs. " + amount + " Debited Successfully", "Haziq's ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Rs. " + amount + " Debited Successfully", "ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
 
                 // Go to the transaction screen after withdrawal
                 setVisible(false);
@@ -148,7 +148,7 @@ public class FastCash extends JFrame implements ActionListener {
                 new Transactions(pin).setVisible(true);
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Database Error: " + e.getMessage(), "Haziq's ATM Simulator", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Database Error: " + e.getMessage(), "ATM Simulator", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
         }
     }

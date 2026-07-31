@@ -9,7 +9,7 @@ import java.lang.reflect.Proxy;
 
 /**
  * Database Connection Helper Class
- * Mocked for Haziq Zia's ATM Simulator (Runs without MySQL!)
+ * Mocked for ATM Simulator (Runs without MySQL!)
  */
 public class Conn {
     public Connection c;

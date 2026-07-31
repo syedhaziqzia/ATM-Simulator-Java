@@ -12,7 +12,7 @@ public class Transactions extends JFrame implements ActionListener{
     String pin;
     Transactions(String pin){
         this.pin = pin;
-        setTitle("Haziq's ATM Simulator");
+        setTitle("ATM Simulator");
         ImageIcon i1 = new ImageIcon(getClass().getResource("/icons/atm.jpg"));
         Image i2 = i1.getImage().getScaledInstance(1000, 1180, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);

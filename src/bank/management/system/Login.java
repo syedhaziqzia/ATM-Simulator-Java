@@ -12,7 +12,7 @@ public class Login extends JFrame implements ActionListener {
     JCheckBox showPin;
   
     Login() {
-        setTitle("Haziq's ATM Simulator");
+        setTitle("ATM Simulator");
         
         // Safe image loading - won't crash if icon is missing
         try {
@@ -123,7 +123,7 @@ public class Login extends JFrame implements ActionListener {
                     setVisible(false);
                     new Transactions(pin).setVisible(true);
                 } else {
-                    JOptionPane.showMessageDialog(null, "Incorrect Card Number or PIN", "Haziq's ATM Simulator", JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Incorrect Card Number or PIN", "ATM Simulator", JOptionPane.ERROR_MESSAGE);
                 }
             } else if (ae.getSource() == b2) {
                 tf1.setText("");
@@ -133,7 +133,7 @@ public class Login extends JFrame implements ActionListener {
                 new Signup().setVisible(true);
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Database Error: " + e.getMessage(), "Haziq's ATM Simulator", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Database Error: " + e.getMessage(), "ATM Simulator", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
         }
     }

@@ -20,7 +20,7 @@ public class Signup extends JFrame implements ActionListener {
 
     Signup() {
 
-        setTitle("Haziq's ATM Simulator - New Account (Page 1)");
+        setTitle("ATM Simulator - New Account (Page 1)");
 
         // Corrected Image Loading
 /*        ImageIcon i1 = new ImageIcon(getClass().getResource(" /icons/atm.jpg")); // Corrected path
@@ -241,11 +241,11 @@ public class Signup extends JFrame implements ActionListener {
 
         try {
             if (t6.getText().equals("")) {
-                JOptionPane.showMessageDialog(null, "Fill all the required fields", "Haziq's ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Fill all the required fields", "ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
             } else if (!email.contains("@") && !email.isEmpty()) {
-                JOptionPane.showMessageDialog(null, "Please enter a valid email address", "Haziq's ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Please enter a valid email address", "ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
             } else if (!pincode.matches("\\d+")) {
-                JOptionPane.showMessageDialog(null, "PIN code must contain only numbers", "Haziq's ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "PIN code must contain only numbers", "ATM Simulator", JOptionPane.INFORMATION_MESSAGE);
             } else {
                 Conn c1 = new Conn();
                 String query = "INSERT INTO signup (formno, name, fname, dob, gender, email, marital, address, city, pincode, state) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -267,7 +267,7 @@ public class Signup extends JFrame implements ActionListener {
                 new Signup2(first).setVisible(true);
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Database Error: " + e.getMessage(), "Haziq's ATM Simulator", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Database Error: " + e.getMessage(), "ATM Simulator", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
         }
 
