@@ -1,0 +1,15 @@
+# Compiled output - do not commit
+bin/
+build/
+dist/
+
+# Stray temporary files
+*.new.jar
+*.class
+
+# NetBeans private settings (contain local machine paths)
+nbproject/private/
+
+# OS files
+.DS_Store
+Thumbs.db
